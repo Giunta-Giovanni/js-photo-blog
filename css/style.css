@@ -59,6 +59,7 @@ header{
 main{
     background-image: url(../img/cork.png);
     /* height: 85vh; */
+    position: relative;
 }
 #box-cards{
     display: flex;
@@ -103,6 +104,40 @@ main{
     font-family: "Edu TAS Beginner", serif;
     font-weight: bold;
     font-size: 25px;
+}
+
+/* card pseudo class */
+.card:hover{
+    transition-duration: 1000ms;
+    transform:rotate(10deg) scale(1.05,1.05);
+    cursor:pointer;
+}
+
+
+/* container attivo al click che mostra immagine */
+.container-zoom{
+    /* display: none; */
+}
+.container-zoom{
+    background-color: rgba(0, 0, 0, 0.749);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container-zoom button {
+    display: block;
+    margin: 30px auto;
+    margin-top: 50px;
+}
+
+.container-zoom img {
+    margin: 0 auto;
+    width: 60%;
 }
 
     
