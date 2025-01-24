@@ -11,10 +11,13 @@ id, titolo, data, url
 
 // --- PRIMA PARTE
 // COSA MI SERVE
-// Dati del DOM da riempire
-// chiamata all'endpoint 
-// estrapolazione dei dati tramite ciclo
-// inserimento dei dati nel codice html
+// Dati del DOM
+    const boxCards = document.getElementById('box-cards'); // box cards
+
+// endpoint 
+    const endpoint = 'https://lanciweb.github.io/demo/api/pictures/'
+
+
 
 
 // compito secondario
