@@ -32,7 +32,7 @@
 
   }
 [class*="col"] {
-    background-color: lightblue;
+    /* background-color: lightblue; */
     /* height: 50px; */
     border: 1px dashed black;
 
@@ -43,8 +43,9 @@
 /* Header */
 header{
     background-image:url(../img/wall.png);
-    height: 15vh;
-
+    position:sticky;
+    top:0px;
+    z-index: 1000;
     
 }
 .titolo{
@@ -57,7 +58,7 @@ header{
 /* main */
 main{
     background-image: url(../img/cork.png);
-    height: 85vh;
+    /* height: 85vh; */
 }
 #box-cards{
     display: flex;
