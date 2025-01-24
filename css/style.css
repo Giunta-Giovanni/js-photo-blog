@@ -18,6 +18,14 @@
   font-style: normal;
 } */
 
-body{
-    background-color: red;
-}
+
+/* DEBUG */
+[class^="container-"] {
+    background-color: rgb(244, 155, 155);
+  }
+[class^="row-"] {
+    background-color: rgb(171, 226, 171);
+  }
+[class^="col-"] {
+    background-color: lightblue;
+  }
