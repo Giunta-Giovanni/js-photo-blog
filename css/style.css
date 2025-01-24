@@ -20,12 +20,33 @@
 
 
 /* DEBUG */
-[class^="container-"] {
+[class*="container"] {
     background-color: rgb(244, 155, 155);
+    /* height: 1500px; */
+    border: 1px dashed black;
   }
-[class^="row-"] {
+[class*="row"] {
     background-color: rgb(171, 226, 171);
+    height: 500px;
+    border: 1px dashed black;
+
   }
-[class^="col-"] {
+[class*="col"] {
     background-color: lightblue;
-  }
+    height: 200px;
+    max-width:300px;
+    border: 1px dashed black;
+
+}
+
+/* Header */
+header{
+    /* background-image: ; */
+}
+.titolo{
+    font-family: "Edu TAS Beginner", serif;
+    font-weight:bold;
+    font-size: 60px;
+    margin: 20px 0;
+}
+
