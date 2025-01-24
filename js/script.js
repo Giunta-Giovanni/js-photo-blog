@@ -28,6 +28,9 @@ axios.get(endpoint)
     const data = response.data; //array di oggetti
     // console.log(data);
 
+    // mi savo i dati dell'url immagine
+    const imglinks = []
+
     // faccio partire il ciclo per ricavarmi i singoli oggetti
     data.forEach(element => {
         // console.log(element);
@@ -57,19 +60,38 @@ axios.get(endpoint)
             </div>
         </div>
         `;
+
+        // inserisco i link delle immagini all'interno dell'array esterno
+        imglinks.push(url)
     });
+
+//debug
+// console.log(imglinks) 
 
 // --- SECONDA PARTE
 // dati del DOM dipendenti alla chiamata
 const boxZoom = document.getElementById('box-zoom');
 const closeZoomBtn = document.getElementById('close-zoom-btn');
+const zoomImage = document.getElementById('zoom-img')
 const card = document.querySelectorAll('.card');
-console.log(boxZoom, closeZoomBtn, card);
+// console.log(boxZoom, closeZoomBtn, zoomImage, card); //debug
 
 // per ogni card
-// al click
-// apri il box zoom (eliminando d-none)
-// fammi vedere la foto
+card.forEach((singlecard)=>{
+    // console.log(singlecard);
+
+    // al click
+    singlecard.addEventListener('click', function(){
+        // apri il box zoom (eliminando d-none)
+        boxZoom.classList.remove('d-none');
+        // fammi vedere la foto
+        // zoomImage.src = imglinks[1]
+
+        
+
+    })
+
+})
 // e se clicco chiudi (aggiungimi d-none)
 // fammi vedere di nuovo la home 
 
