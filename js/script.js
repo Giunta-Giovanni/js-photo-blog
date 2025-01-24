@@ -25,6 +25,38 @@ axios.get(endpoint)
     const data = response.data; //array di oggetti
     // console.log(data);
 
+    // faccio partire il ciclo per ricavarmi i singoli oggetti
+    data.forEach(element => {
+        // console.log(element);
+
+        // mi estrapolo le proprietà degli oggetti
+        const {id, title, date, url} = element;
+        console.log(id, title, date, url);
+
+        // inserisco i dati nel codice html
+        boxCards.innerHTML += 
+        `
+        <!-- column card --> 
+        <div class="col-12 col-md-6 col-lg-4">
+            <!-- card -->
+            <div class="card my-4">
+                <!-- image -->
+                <img src="${url}"  class="card-img-top" alt="...">
+                <!-- text -->
+                <div class="card-body pt-1">
+                    <!-- date -->
+                    <h5 class="card-date m-0">${date}</h5>
+                    <!-- title -->
+                    <p class="card-title m-0">${title}</p>
+                </div>
+
+                <!-- effect pin card on the wall -->
+                <img class="pin-card" src="./img/pin.svg" alt="">
+            </div>
+        </div>
+        `;
+
+    });
     
     
 })
