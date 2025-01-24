@@ -16,97 +16,52 @@
     <title>js photo blog</title>
 </head>
 <body>
-    <header>
-        <div class="container text-center">
-            <!-- Titolo -->
-            <h1 class="titolo">ESTATE '24</h1>
-        </div>
+
+    <!-- header -->
+    <header class="text-center">
+        <!-- Titolo -->
+        <h1 class="titolo">ESTATE '24</h1>
     </header>
+
     <!-- <main> -->
     <main>
-        <!-- contenitore esterno -->
-        <div class="container text-center">
+
             <!-- riga contenente le card -->
-            <div id="box-cards" class="row py-3">
+            <div id="box-cards" class="row py-3 container text-center">
 
-                <!-- col contenente la card --> 
-                <div class="col-12 col-md-6 col-lg-4"> <!-- da gestire con java -->
-                    <div class="card my-4">
-                        <img src="https://marcolanci.it/boolean/assets/pictures/1.png"  class="card-img-top" alt="...">
-                        <div class="card-body pt-1">
-                            <h5 class="card-date m-0">01-07-2024</h5>
-                            <p class="card-title m-0">SKATE PARK</p>
-                        </div>
-                        <img class="pin-card" src="./img/pin.svg" alt="">
-                    </div>
-                </div>
-                <!-- col contenente la card --> 
-                <div class="col-12 col-md-6 col-lg-4"> <!-- da gestire con java -->
-                    <div class="card my-4">
-                        <img src="https://marcolanci.it/boolean/assets/pictures/1.png"  class="card-img-top" alt="...">
-                        <div class="card-body pt-1">
-                            <h5 class="card-date m-0">01-07-2024</h5>
-                            <p class="card-title m-0">SKATE PARK</p>
-                        </div>
-                        <img class="pin-card" src="./img/pin.svg" alt="">
-                    </div>
+                <!-- example -->
 
-                </div>
-                <!-- col contenente la card --> 
-                <div class="col-12 col-md-6 col-lg-4"> <!-- da gestire con java -->
+                <!-- column card --> 
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- card -->
                     <div class="card my-4">
+                        <!-- image -->
                         <img src="https://marcolanci.it/boolean/assets/pictures/1.png"  class="card-img-top" alt="...">
+                        <!-- text -->
                         <div class="card-body pt-1">
+                            <!-- date -->
                             <h5 class="card-date m-0">01-07-2024</h5>
+                            <!-- title -->
                             <p class="card-title m-0">SKATE PARK</p>
                         </div>
+
+                        <!-- effect pin card on the wall -->
                         <img class="pin-card" src="./img/pin.svg" alt="">
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4"> <!-- da gestire con java -->
-                    <div class="card my-4">
-                        <img src="https://marcolanci.it/boolean/assets/pictures/1.png"  class="card-img-top" alt="...">
-                        <div class="card-body pt-1">
-                            <h5 class="card-date m-0">01-07-2024</h5>
-                            <p class="card-title m-0">SKATE PARK</p>
-                        </div>
-                        <img class="pin-card" src="./img/pin.svg" alt="">
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4"> 
-                    <div class="card my-4">
-                        <img src="https://marcolanci.it/boolean/assets/pictures/1.png"  class="card-img-top" alt="...">
-                        <div class="card-body pt-1">
-                            <h5 class="card-date m-0">01-07-2024</h5>
-                            <p class="card-title m-0">SKATE PARK</p>
-                        </div>
-                        <img class="pin-card" src="./img/pin.svg" alt="">
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4"> 
-                    <div class="card my-4">
-                        <img src="https://marcolanci.it/boolean/assets/pictures/1.png"  class="card-img-top" alt="...">
-                        <div class="card-body pt-1">
-                            <h5 class="card-date m-0">01-07-2024</h5>
-                            <p class="card-title m-0">SKATE PARK</p>
-                        </div>
-                        <img class="pin-card" src="./img/pin.svg" alt="">
-                    </div>
-                </div>
+
             </div>
 
-            <!-- contenitore che contiene immagine selezionata -->
-            <div class="container-zoom">
+            <!-- container zoom-card-image  -->
+            <div class="container-zoom d-none">
 
-                <!-- pulsante chiudi -->
-                <button type="button" class="btn btn-light">CHIUDI</button>
-                 <!-- immagine della card -->
+                <!-- close button -->
+                <button id="close-zoom-btn" type="button" class="btn btn-light">CHIUDI</button>
+                 <!-- card image-->
                 <img src="https://marcolanci.it/boolean/assets/pictures/1.png"  class="card-img-top" alt="...">
             </div>
         
     </main>
-
-    <!-- </main> -->
 
 
    

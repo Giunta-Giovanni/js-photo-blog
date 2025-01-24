@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 400 to 700
 
@@ -43,8 +48,7 @@
 /* Header */
 header{
     background-image:url(../img/wall.png);
-    position:sticky;
-    top:0px;
+
     z-index: 1000;
     
 }
@@ -52,7 +56,10 @@ header{
     font-family: "Edu TAS Beginner", serif;
     font-weight:bold;
     font-size: 60px;
-    margin: 20px 0;
+    padding: 20px 0;
+    margin: 0;
+    position:sticky;
+    top:0px;
 }
 
 /* main */
@@ -64,6 +71,8 @@ main{
 #box-cards{
     display: flex;
     justify-content: space-evenly;
+    margin: 0 auto;
+    height: 90vh; /* optional */
 }
 .container-card{
     margin:0 10px;
@@ -115,9 +124,7 @@ main{
 
 
 /* container attivo al click che mostra immagine */
-.container-zoom{
-    /* display: none; */
-}
+
 .container-zoom{
     background-color: rgba(0, 0, 0, 0.749);
     margin: 0;
