@@ -23,7 +23,7 @@ id, titolo, data, url
 // chiamata all'endpoint
 axios.get(endpoint)
 // risposta dall'endpoint
- .then((response) => {
+.then((response) => {
     // mi salvo il dato di risposta
     const data = response.data; //array di oggetti
     // console.log(data);
@@ -37,7 +37,7 @@ axios.get(endpoint)
 
         // mi estrapolo le proprietà degli oggetti
         const {id, title, date, url} = element;
-        console.log(id, title, date, url);
+        // console.log(id, title, date, url);
 
         // inserisco i dati nel codice html
         boxCards.innerHTML += 
@@ -65,39 +65,42 @@ axios.get(endpoint)
         imglinks.push(url)
     });
 
-//debug
-// console.log(imglinks) 
+    //debug
+    // console.log(imglinks) 
 
-// --- SECONDA PARTE
-// dati del DOM dipendenti alla chiamata
-const boxZoom = document.getElementById('box-zoom');
-const closeZoomBtn = document.getElementById('close-zoom-btn');
-const zoomImage = document.getElementById('zoom-img')
-const card = document.querySelectorAll('.card');
-// console.log(boxZoom, closeZoomBtn, zoomImage, card); //debug
+    // --- SECONDA PARTE
+    // dati del DOM dipendenti alla chiamata
+    const boxZoom = document.getElementById('box-zoom');
+    const closeZoomBtn = document.getElementById('close-zoom-btn');
+    const zoomImage = document.getElementById('zoom-img')
+    const card = document.querySelectorAll('.card');
+    // console.log(boxZoom, closeZoomBtn, zoomImage, card); //debug
 
-// per ogni card
-card.forEach((singlecard)=>{
-    // console.log(singlecard);
+    // per ogni card
+    card.forEach((singleCard,index) => {
+        // console.log(singleCard,index);
 
-    // al click
-    singlecard.addEventListener('click', function(){
-        // apri il box zoom (eliminando d-none)
-        boxZoom.classList.remove('d-none');
-        // fammi vedere la foto
-        // zoomImage.src = imglinks[1]
+        // al click della card
+        singleCard.addEventListener('click',function(){
+            
+            // apri il box zoom (eliminando d-none)
+            boxZoom.classList.remove('d-none');
 
-        
-
+            // Mostra l’immagine dall’array imglinks con lo stesso indice della card cliccata.
+            zoomImage.src = imglinks[index]
+        })
     })
 
+    // e se clicco chiudi (aggiungimi d-none)
+    closeZoomBtn.addEventListener('click', function () {
+        // fammi vedere di nuovo la home 
+        // aggiungendo di nuovo display none
+        boxZoom.classList.add('d-none')
+        
 })
-// e se clicco chiudi (aggiungimi d-none)
-// fammi vedere di nuovo la home 
-
-    
-})
 
 
-
+})   
+// codice da eseguire in caso di errore    
+.catch(error => console.error(error))
 
