@@ -21,12 +21,12 @@
 
 /* DEBUG */
 [class*="container"] {
-    background-color: rgb(244, 155, 155);
+    /* background-color: rgb(244, 155, 155); */
     /* height: 1500px; */
     border: 1px dashed black;
   }
 [class*="row"] {
-    background-color: rgb(171, 226, 171);
+    /* background-color: rgb(171, 226, 171); */
     /* height: 800px; */
     border: 1px dashed black;
 
@@ -42,7 +42,9 @@
 
 /* Header */
 header{
-    background-image: ;
+    background-image:url(../img/wall.png);
+    height: 15vh;
+
     
 }
 .titolo{
@@ -53,7 +55,10 @@ header{
 }
 
 /* main */
-
+main{
+    background-image: url(../img/cork.png);
+    height: 85vh;
+}
 #box-cards{
     display: flex;
     justify-content: space-evenly;
