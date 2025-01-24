@@ -9,13 +9,16 @@ id, titolo, data, url
 // compito principale
 // il mio scopo è stamparli a schermo insieme al codice html
 
-// --- PRIMA PARTE
-// COSA MI SERVE
-// Dati del DOM
-    const boxCards = document.getElementById('box-cards'); // box cards
+// compito secondario
+// al click dell'immagine deve apparirmi la stessa immagine ingrandita
 
+
+// Dati del DOM indipendenti
+    const boxCards = document.getElementById('box-cards');
+    
 // endpoint 
-    const endpoint = 'https://lanciweb.github.io/demo/api/pictures/'
+    const endpoint = 'https://lanciweb.github.io/demo/api/pictures/';
+
 
 // chiamata all'endpoint
 axios.get(endpoint)
@@ -49,29 +52,30 @@ axios.get(endpoint)
                     <!-- title -->
                     <p class="card-title m-0">${title}</p>
                 </div>
-
                 <!-- effect pin card on the wall -->
                 <img class="pin-card" src="./img/pin.svg" alt="">
             </div>
         </div>
         `;
-
     });
-    
+
+// --- SECONDA PARTE
+// dati del DOM dipendenti alla chiamata
+const boxZoom = document.getElementById('box-zoom');
+const closeZoomBtn = document.getElementById('close-zoom-btn');
+const card = document.querySelectorAll('.card');
+console.log(boxZoom, closeZoomBtn, card);
+
+// per ogni card
+// al click
+// apri il box zoom (eliminando d-none)
+// fammi vedere la foto
+// e se clicco chiudi (aggiungimi d-none)
+// fammi vedere di nuovo la home 
+
     
 })
 
-
-
-// compito secondario
-// al click dell'immagine deve apparirmi la stessa immagine ingrandita
-
-// --- SECONDA PARTE
-// COSA MI SERVE
-// dati del DOM da gestire--> contenitore, pulsante
-// al click dell'immagine
-// mostra la foto 
-// al click del pulsante chiudi, riporta in d-none 
 
 
 
