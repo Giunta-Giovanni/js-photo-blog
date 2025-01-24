@@ -72,7 +72,6 @@ main{
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
-    height: 90vh; /* optional */
 }
 .container-card{
     margin:0 10px;
