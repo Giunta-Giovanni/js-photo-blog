@@ -17,6 +17,17 @@ id, titolo, data, url
 // endpoint 
     const endpoint = 'https://lanciweb.github.io/demo/api/pictures/'
 
+// chiamata all'endpoint
+axios.get(endpoint)
+// risposta dall'endpoint
+ .then((response) => {
+    // mi salvo il dato di risposta
+    const data = response.data; //array di oggetti
+    // console.log(data);
+
+    
+    
+})
 
 
 
