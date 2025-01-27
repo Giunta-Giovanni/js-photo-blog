@@ -25,10 +25,10 @@ axios.get(endpoint)
 // risposta dall'endpoint
 .then((response) => {
     // mi salvo il dato di risposta
-    const data = response.data; //array di oggetti
-    // console.log(data);
+    const data = response.data;
+    console.log("Questo è l'array di oggetti",data);
 
-    // mi savo i dati dell'url immagine
+    // mi savo un array contente gli url immagine
     const imglinks = []
 
     // faccio partire il ciclo per ricavarmi i singoli oggetti
@@ -37,7 +37,7 @@ axios.get(endpoint)
 
         // mi estrapolo le proprietà degli oggetti
         const {id, title, date, url} = element;
-        // console.log(id, title, date, url);
+        console.log(`queste sono le proprità dell oggetto ${id} -> id:${id}, Titolo:${title}, Data:${date}, Url:${url}`);
 
         // inserisco i dati nel codice html
         boxCards.innerHTML += 
@@ -66,7 +66,7 @@ axios.get(endpoint)
     });
 
     //debug
-    // console.log(imglinks) 
+    console.table (imglinks) 
 
     // --- SECONDA PARTE
     // dati del DOM dipendenti alla chiamata
@@ -78,7 +78,7 @@ axios.get(endpoint)
 
     // per ogni card
     card.forEach((singleCard,index) => {
-        // console.log(singleCard,index);
+        console.log(`queste è la card ${index}`, singleCard);
 
         // al click della card
         singleCard.addEventListener('click',function(){
@@ -87,7 +87,8 @@ axios.get(endpoint)
             boxZoom.classList.remove('d-none');
 
             // Mostra l’immagine dall’array imglinks con lo stesso indice della card cliccata.
-            zoomImage.src = imglinks[index]
+            zoomImage.src = imglinks[index];
+
         })
     })
 
@@ -97,10 +98,10 @@ axios.get(endpoint)
         // aggiungendo di nuovo display none
         boxZoom.classList.add('d-none')
         
-})
-
-
+    })
 })   
 // codice da eseguire in caso di errore    
-.catch(error => console.error(error))
+.catch(error => console.error(error));
+
+
 

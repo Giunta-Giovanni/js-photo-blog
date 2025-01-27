@@ -27,7 +27,8 @@
 /* Header */
 header{
     background-image:url(../img/wall.png);
-
+    position:sticky;
+    top:0px;
     z-index: 1000;
     
 }
@@ -37,8 +38,7 @@ header{
     font-size: 60px;
     padding: 20px 0;
     margin: 0;
-    position:sticky;
-    top:0px;
+
 }
 
 /* main */
@@ -57,7 +57,7 @@ main{
     position: relative;
     border-radius: 0;
     margin: 10px;
-    transition: transform 1s ease;
+    transition: transform 1s ease; /*ritorno in posizione lentamente*/
 }
 .pin-card{
     position: absolute;
@@ -97,6 +97,11 @@ main{
     cursor:pointer; /* cambio del cursore*/
 }
 
+.card:hover .pin-card{
+    opacity: 0; /* nascondere il pin*/
+    transition: opacity 0.5s;
+}
+
 
 /* container attivo al click che mostra immagine */
 
@@ -104,6 +109,7 @@ main{
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.749);
+
     /*centramento sopra l'altro container*/
     position: absolute;
     top: 0;     
@@ -113,7 +119,7 @@ main{
 }
 
 .container-zoom button {
-    display: block;
+    display: block; /* perche il pulsante è inline*/ 
     margin: 30px auto;
     margin-top: 50px;
 }
