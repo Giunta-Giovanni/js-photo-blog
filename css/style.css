@@ -3,27 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 700
-
-.edu-tas-beginner-<uniquifier> {
-  font-family: "Edu TAS Beginner", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 700
-
-.sometype-mono-<uniquifier> {
-  font-family: "Sometype Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
-
 /* DEBUG */
 /* [class*="container"] {
     background-color: rgb(244, 155, 155);
@@ -69,19 +48,16 @@ main{
     position: relative;
 }
 #box-cards{
-    display: flex;
-    justify-content: space-evenly;
     margin: 0 auto;
 }
-.container-card{
-    margin:0 10px;
-}
+
 
 /* card */
 .card {
     position: relative;
     border-radius: 0;
     margin: 10px;
+    transition: transform 1s ease;
 }
 .pin-card{
     position: absolute;
@@ -89,7 +65,6 @@ main{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 60px;
-    padding: 0;
     margin: 0;
 }
 .card img {
@@ -116,21 +91,23 @@ main{
 
 /* card pseudo class */
 .card:hover{
-    transition-duration: 1000ms;
-    transform:rotate(10deg) scale(1.05,1.05);
-    cursor:pointer;
+    box-shadow: 0px 0px  15px 6px rgba(0, 0, 0, 0.5); /* ombra card al passaggio del mouse*/
+    transition-duration: 1000ms;    /* durata della transizione*/
+    transform:rotate(10deg) scale(1.05,1.05); /* rotazione s*/
+    cursor:pointer; /* cambio del cursore*/
 }
 
 
 /* container attivo al click che mostra immagine */
 
 .container-zoom{
-    background-color: rgba(0, 0, 0, 0.749);
     margin: 0;
     padding: 0;
+    background-color: rgba(0, 0, 0, 0.749);
+    /*centramento sopra l'altro container*/
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0;     
+    left: 0;   
     height: 100%;
     width: 100%;
 }
