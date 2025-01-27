@@ -126,8 +126,14 @@ main{
 
 .container-zoom img {
     margin: 0 auto;
-    width: 50%;
-    border-radius: 20px
+    width: 45%;
+    border-radius: 20px;
+    transition: 3s;
 }
 
     
+/* zoom immagine al click in foto */
+#zoom-img:active{
+    transition: 3s;
+    transform: scale(2);
+}
